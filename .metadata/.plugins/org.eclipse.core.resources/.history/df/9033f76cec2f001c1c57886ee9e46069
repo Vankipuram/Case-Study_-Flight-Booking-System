@@ -1,0 +1,5 @@
+package com.checkin.repo;
+
+public class CheckInRepository {
+
+}

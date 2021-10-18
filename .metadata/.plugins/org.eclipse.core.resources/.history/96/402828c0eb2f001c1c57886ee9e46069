@@ -1,0 +1,5 @@
+package com.checkin.entity;
+
+public class CheckIn {
+
+}

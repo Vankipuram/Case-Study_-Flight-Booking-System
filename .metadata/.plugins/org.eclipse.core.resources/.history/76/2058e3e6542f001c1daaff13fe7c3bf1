@@ -1,0 +1,5 @@
+package com.booking.repo;
+
+public class BookingRepository {
+
+}
