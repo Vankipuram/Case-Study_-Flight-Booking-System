@@ -3,15 +3,31 @@ package com.flight.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="Flight")
+@Document(collation = "Flight")
 public class Flights {
 	@Id
 	private Integer flightId;
 	private String flightName;
-	private  String flightFrom;
+	private String flightFrom;
 	private String flightTo;
 	private String date;
 	private Double fare;
+	
+	public Flights() {
+		super();
+		
+	}
+	
+	public Flights(Integer flightId, String flightName, String flightFrom, String flightTo, String date, Double fare) {
+		super();
+		this.flightId = flightId;
+		this.flightName = flightName;
+		this.flightFrom = flightFrom;
+		this.flightTo = flightTo;
+		this.date = date;
+		this.fare = fare;
+	}
+
 	public Double getFare() {
 		return fare;
 	}

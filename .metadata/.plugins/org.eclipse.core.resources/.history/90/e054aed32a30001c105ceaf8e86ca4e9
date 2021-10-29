@@ -1,4 +1,0 @@
-
-spring.data.mongodb.uri=mongodb+srv://user:12345@user.sp1ha.mongodb.net/FlightBooking?retryWrites=true&w=majority
-server.port=8001
-spring.application.name=FlightMicroService

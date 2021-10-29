@@ -1,0 +1,20 @@
+server:
+   port: 8100
+      
+spring:  application:    name: ZuulGateWay
+    
+zuul:
+   routes:
+     flightSerice:
+      serviceId:FlightService
+     BookingService:
+       serviceId:BookingService
+     CheckinService:
+       serviceId:CheckinService
+     UserService:
+       serviceId:UserService  
+     LoginService:
+       serviceId:LoginService
+       
+         
+      

@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\NVANKIPU\eclipse-workspace\Case Study _Flight Booking System\ZuulGateway"/>
 			<item value="C:\Users\NVANKIPU\Downloads\CropDeal.Application-master\CropDeal.Application-master\ZuulGateway"/>
 		</list>
 		<list key="projectNameTemplate">

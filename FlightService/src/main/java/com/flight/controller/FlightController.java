@@ -60,10 +60,11 @@ public class FlightController {
 		flightSer.updateFlight(flight);
 		return "Flight updated";
 	}
-	@GetMapping("/getflightIdAll")
-	public List<Integer> getIdAll(){
-		return flightSer.getFlightbyId();
-	}
+//	@GetMapping("/getflightIdAll")
+//	public List<Integer> getIdAll(){
+//		return flightSer.getFlightbyId();
+//	}
+	
 	@GetMapping("/getIdDate")
 	public BookingDao getFlightid() {
 		BookingDao bookdao = new BookingDao();
@@ -71,5 +72,6 @@ public class FlightController {
 		return bookdao;
 		
 	}
+	
 
 }

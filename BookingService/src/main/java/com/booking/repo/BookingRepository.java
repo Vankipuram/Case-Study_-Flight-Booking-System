@@ -6,4 +6,6 @@ import com.booking.entity.Booking;
 
 public interface BookingRepository extends MongoRepository<Booking, String>{
 
+	Booking deletebypnr(Integer id);
+
 }

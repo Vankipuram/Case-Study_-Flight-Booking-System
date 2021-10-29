@@ -9,6 +9,16 @@ public class Booking {
 	private Integer pnr;
 	private Integer flightId;
 	private String date;
+	
+	public Booking() {
+		super();
+	}
+	public Booking(Integer pnr, Integer flightId, String date) {
+		super();
+		this.pnr = pnr;
+		this.flightId = flightId;
+		this.date = date;
+	}
 	public Integer getPnr() {
 		return pnr;
 	}

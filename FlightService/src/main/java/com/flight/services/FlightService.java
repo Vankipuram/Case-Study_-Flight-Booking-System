@@ -34,7 +34,7 @@ public class FlightService {
 		bd.setDate(lst.get(0).getDate());
 		return bd;
 	}
-	public List<Integer> getFlightbyId(){
+	public List<Integer> getFlightbyId(String date){
 		List<Flights> lst = flightRepo.findAll();
 		List<Integer> out = new ArrayList<>();
 		for(int i = 0; i < lst.size(); i ++)
@@ -47,5 +47,7 @@ public class FlightService {
 				.filter(flight-> (flight.getFlightFrom().equals(flightFrom) && flight.getFlightTo().equals(flightTo)&& flight.getDate().equals(date)))
 				.toList();
 	}
+	
+	
 
 }
