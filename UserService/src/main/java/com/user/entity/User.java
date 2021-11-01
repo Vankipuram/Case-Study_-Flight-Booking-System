@@ -5,23 +5,28 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "user")
 public class User {
+	
 	@Id
 	private Integer flightId;
-	private String firstName;
-	private String lastName;
+	//@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	private Integer flightsheet;
+	private String email;
+	
+	private String flightName;
+	private  String flightFrom;
+	private String flightTo;
+	private String date;
+	private Double fare;
+	private String firstname;
+	private String lastname;
 	private String gender;
 	private Integer age;
 	
-	public User() {
-		super();
+	public String getEmail() {
+		return email;
 	}
-	public User(Integer flightId, String firstName, String lastName, String gender, Integer age) {
-		super();
-		this.flightId = flightId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.gender = gender;
-		this.age = age;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public Integer getFlightId() {
 		return flightId;
@@ -29,17 +34,17 @@ public class User {
 	public void setFlightId(Integer flightId) {
 		this.flightId = flightId;
 	}
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 	public String getGender() {
 		return gender;
@@ -53,11 +58,49 @@ public class User {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+	public String getFlightName() {
+		return flightName;
+	}
+	public void setFlightName(String flightName) {
+		this.flightName = flightName;
+	}
+	public String getFlightFrom() {
+		return flightFrom;
+	}
+	public void setFlightFrom(String flightFrom) {
+		this.flightFrom = flightFrom;
+	}
+	public String getFlightTo() {
+		return flightTo;
+	}
+	public void setFlightTo(String flightTo) {
+		this.flightTo = flightTo;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public Double getFare() {
+		return fare;
+	}
+	public void setFare(Double fare) {
+		this.fare = fare;
+	}
+	public Integer getFlightsheet() {
+		return flightsheet;
+	}
+	public void setFlightsheet(Integer flightsheet) {
+		this.flightsheet = flightsheet;
+	}
 	@Override
 	public String toString() {
-		
-		return "User[flightId="+flightId+",firstName="+firstName+",lastName="+lastName+",gender="+gender+",age="+age+"]";
+		return "User [flightId=" + flightId + ", flightsheet=" + flightsheet + ", email=" + email + ", flightName="
+				+ flightName + ", flightFrom=" + flightFrom + ", flightTo=" + flightTo + ", date=" + date + ", fare="
+				+ fare + ", firstname=" + firstname + ", lastname=" + lastname + ", gender=" + gender + ", age=" + age
+				+ "]";
 	}
 	
-
+	
 }

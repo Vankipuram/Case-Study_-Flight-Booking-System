@@ -1,5 +1,7 @@
 package com.user.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +13,15 @@ public class UserService {
 	@Autowired
 	private UserRepo userRepo;
 	
-	public void addUserDetails(User user) {
+	public void adduserdetails(User user) {
 		userRepo.save(user);
 	}
-	public User showUserDetailsById(Integer id) {
-		return userRepo.findById(id).get();
+	
+	public List<User> showuserdetailsbyId (String email) {
+		return userRepo.findByemail(email);
 	}
-
+	
+	public void deleteUserDetails(String email) {
+		 userRepo.deleteByemail(email);
+	}
 }

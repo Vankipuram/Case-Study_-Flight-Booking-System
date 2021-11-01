@@ -1,14 +1,21 @@
 package com.flight.dao;
 
-import com.flight.entity.Flight;
+import com.flight.entity.Flights;
 
 public class FlightDao {
+	
 	private Integer flightId;
 	private String flightName;
 	private  String flightFrom;
 	private String flightTo;
 	private String date;
 	private Double fare;
+	public Double getFare() {
+		return fare;
+	}
+	public void setFare(Double fare) {
+		this.fare = fare;
+	}
 	public Integer getFlightId() {
 		return flightId;
 	}
@@ -39,14 +46,8 @@ public class FlightDao {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	public Double getFare() {
-		return fare;
-	}
-	public void setFare(Double fare) {
-		this.fare = fare;
-	}
-	public Flight getFlightObject(FlightDao object) {
-		Flight flightObject = new Flight();
+	public Flights getFlightObject(FlightDao object) {
+		Flights flightObject = new Flights();
 		flightObject.setFlightId(object.getFlightId());
 		flightObject.setFlightName(object.getFlightName());
 		flightObject.setFlightFrom(object.getFlightFrom());;
@@ -55,5 +56,6 @@ public class FlightDao {
 		flightObject.setFare(object.getFare());
 		return flightObject;
 	}
+	
 
 }

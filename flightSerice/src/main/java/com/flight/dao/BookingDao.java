@@ -1,6 +1,7 @@
 package com.flight.dao;
 
 public class BookingDao {
+	
 	private Integer flightId;
 	private String date;
 	
